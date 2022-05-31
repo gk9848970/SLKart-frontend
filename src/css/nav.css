@@ -1,0 +1,28 @@
+.home-div{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.logo{
+    margin-left: 22em;
+}
+
+.navcoldesk{
+    margin-right:2%;
+    display: flex;
+    margin-left: auto;
+}
+
+#logoImage{
+    margin-left:4rem; 
+}
+
+@media(max-width: 768px){
+    #logoImage{
+        margin-left:0rem;  
+    }
+}

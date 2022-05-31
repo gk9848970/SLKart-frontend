@@ -1,0 +1,36 @@
+.courseCard{
+    width:200px;
+    margin:10px;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        margin:5px 0px;
+        h4{
+            margin:0px;
+        }
+    }
+    .cardimg{
+        position:relative;
+        font-size: 12px;
+        img{
+            width:200px;
+        }
+       
+        span{
+            position:absolute;
+            top:20px;
+            left:20px;
+            background: #FFCA41;
+            border-radius: 9px;
+            padding:5px 10px;
+        }
+    }
+    h5,p{
+        color: rgba(0, 0, 0, 0.55);
+    }
+    #price{
+        color:#1A5F02;
+        font-size: larger;
+    }
+}

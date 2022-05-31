@@ -1,0 +1,11 @@
+.course{
+    width:65%;
+    margin:0 auto;
+    .main{
+        display: flex;
+        justify-content: space-between;
+        .maincardcont{
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.headbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6A2F85;
+    color: #fff;
+    .contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

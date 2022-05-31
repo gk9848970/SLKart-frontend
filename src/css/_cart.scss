@@ -1,0 +1,30 @@
+.cart{
+    width:65%;
+    margin: 0 auto;
+
+    .cartcontainer{
+        display: flex;
+        .cartcontainerl{
+            box-shadow: 0px 0px 4px rgba(106, 47, 133, 0.16);
+          table{
+            margin:30px 0px;
+          }
+          table,td,th{
+              padding:10px;
+              text-align: center;
+              border-collapse: collapse;
+          }
+          tr{
+            border: 1px solid #E2E2E2;
+          }
+        }
+        .cartcontainerr{
+            margin-left: 40px;
+            padding: 10px 20px;
+            box-shadow: 0px 0px 4px rgba(106, 47, 133, 0.16);
+            table,td{
+                padding:10px;
+            }
+        }
+    }
+}

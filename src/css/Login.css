@@ -1,0 +1,287 @@
+.login-page {
+    background-color: #F9FAFC;
+    height: auto;
+    width: 100%;
+  
+  }
+  
+  .logo {
+    margin-top: 50%;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 6.313rem;
+    /* margin-left: 15%; */
+  }
+  .loginmain-div{
+      height: 100vh;
+      background-color: #F9FAFC;
+  }
+  .forget-textline {
+    text-decoration: none;
+    color: #03014C;
+  
+  }
+  
+  .text-content {
+    width: 30.875rem;
+    height: 16.5rem;
+  }
+  
+  .form-content {
+    width: 30.313rem;
+    height: 30.316rem;
+  }
+  
+  .para-text {
+    font-size: 1.375rem;
+    color: #6b6b6b;
+    text-align: left;
+  }
+  
+  .heading {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #595959;
+  }
+  
+  .form-heading {
+    font-size: 2.063rem;
+    font-weight: 700;
+    color: #595959;
+    text-align: center;
+  }
+  
+  /* .form-content{
+        border: 1px solid grey;
+        padding: 20px;
+        height: 300px;
+    } */
+  
+  
+  .form-text {
+    text-align: center;
+  }
+  
+  .forget-text {
+    margin-left: 150px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    background-color: #6A2F85;
+  }
+  
+  .logout-btn {
+    margin-top: 50px;
+  
+  }
+  
+  .login-form-box {
+    /* height: 450px; */
+    padding: 40px;
+    margin-bottom: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(106, 47, 133, 0.18);
+    border-radius: 8.327px;
+    margin-top: 80px;
+    
+  }
+  
+  .validate {
+    color: red;
+    margin-left: 0%;
+    width: 150%;
+    font-weight: 600;
+  }
+  
+  .login {
+    color: green;
+    margin-left: 0%;
+    width: 150%;
+    font-weight: 600;
+  }
+  
+  .input-checkbox-label {
+    margin-right: 20px;
+  }
+  
+  .verify-otp {
+    width: 100%;
+  }
+  
+  .validate-confirmPassowrd-success,
+  .validate-success {
+    color: green;
+  }
+  
+  .forget-password-block {
+    margin-left: 25%;
+  }
+  
+  .resetPassword {
+    margin-left: 50%;
+    width: 100%;
+  }
+  
+  .form-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .icon1 {
+    position: absolute;
+    left: 85%;
+    font-size: 25px;
+    color: #545454;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon2 {
+    position: absolute;
+    left: 12%;
+    font-size: 25px;
+    color: #545454;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .download-files-detailpage{
+      color: red;
+    } */
+  .template-Section {
+    margin-bottom: 50px;
+  }
+  
+  .main_AiOutlineClose {
+    cursor: pointer;
+  }
+  
+  .boy-img {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .sign-text {
+    /* position: absolute; */
+    /* left: 152px;
+      top: 232px; */
+    width: 629px;
+    /* height: 196px; */
+    margin-top: 70px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 78px;
+    color: #000000;
+  }
+  
+  .start-learning {
+    /* position: absolute; */
+    /* margin-left: 152px; */
+    width: 441px;
+    height: 64px;
+    margin-top: 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 32px;
+    color: #000000;
+  }
+  
+  .register {
+    /* position: absolute; */
+    width: 298px;
+    height: 93px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 36px;
+    color: #6A2F85;
+  }
+  
+  .account {
+    /* position: absolute; */
+    /* left: 152px;
+      top: 568px; */
+    /* margin-top: 50px; */
+    width: 298px;
+    height: 93px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 36px;
+    color: #03014C;
+  }
+  
+  .loginBlock {
+    flex-direction: row;
+  }
+  .learning-block-boy {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media (max-width: 768px) {
+    .boy-img {
+      width: 100%;
+      height: 400px;
+      margin-left: 40%;
+    }
+    .learning-block-boy {
+      flex-direction: column;
+    }
+    .loginBlock {
+      flex-direction: column;
+    }
+    .forget-password-block {
+      margin-left: 0%;
+    }
+  
+    .login-form-box {
+      background: #FFFFFF;
+      box-shadow: 0px 4px 16px rgba(106, 47, 133, 0.18);
+      border-radius: 8.327px;
+      padding: 20px;
+      width: 100%;
+      margin-left: 40%;
+      margin-bottom: 50px;
+      /* margin-top: 600px; */
+    }
+  
+    .password_icon {
+      position: absolute;
+      margin-left: 85%;
+      margin-top: 2%;
+      color: #b4b3ca;
+    }
+  
+    .logout-btn {
+      margin-top: 50px;
+      margin-left: 200px;
+    }
+  
+    .password-image {
+      width: 30px;
+      position: absolute;
+      margin-left: 80%;
+      margin-top: -6%;
+      /* color: #b4b3ca; */
+    }
+  
+  
+  
+  }

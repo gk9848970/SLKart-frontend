@@ -1,0 +1,33 @@
+.userDetails{
+    width:65%;
+    margin:0 auto;
+    .user{
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        h2{
+            margin-left: 20px;
+        }
+    }
+    .profile{
+        display: flex;
+        .profileBtn{
+            color: #6A2F85;
+        }
+        .profileDetails{
+            margin-left: 30px;
+            color:#5D5A67;
+               table{
+                   border-collapse: collapse;
+                   tr,td{
+                       padding:10px;
+                   }
+               }
+        }
+    }
+}

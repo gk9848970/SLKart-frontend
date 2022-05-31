@@ -1,0 +1,18 @@
+.horizontalbar{
+    display: flex;
+    margin:20px 0px;
+    button{
+        padding:10px 30px;
+        color:#5D5A67;
+        background:#fff;
+        border:none;
+        border-top:solid 5px #fff;
+        border-left:solid 1px #fff;
+        border-right:solid 1px #fff;
+        &:hover{
+            border-top:solid 5px #6A2F85;
+            border-left:solid 1px #9E9E9E;
+            border-right:solid 1px #9E9E9E;
+        }
+    }
+}

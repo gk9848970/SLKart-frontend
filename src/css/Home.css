@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.course_search{
+    width: 302px;
+    height: 45px;
+    background: #F6F6F6;
+    border-radius: 9px;
+}
+.course_select_card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(106, 47, 133, 0.1);
+    border-radius: 9px;
+    width :360px;
+    height: 510px;
+    padding: 30px;
+}
+
+.textStyle{
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 28px;
+/* identical to box height */
+
+
+color: #6A2F85;
+}
+
+.banner-text{
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-size:  3.3854166666666665vw;
+color: #000000;
+margin-bottom: 0px !important;
+
+}
+.btn2:hover{
+background-color: #6A2F85;
+color: white;
+}
+
+.btn2{
+    background-color: white;
+    color: #6A2F85;
+    border: 0.5px solid #6A2F85;
+}
+
+.spantext::before {
+    content: "Learning Needs";
+    animation: animate infinite 5s;
+    color: #6A2F85;
+    display: hidden;
+}
+.bannerdiv2{
+    display: flex;
+}
+@keyframes animate {
+  
+    0% {
+        content: "Learning Needs";
+        overflow: hidden;
+    }
+
+    50% {
+        content: "Training";
+        display: none ;
+    }
+
+    75% {
+        content: "Skills";
+        display: none ;
+    }
+}
+
+.banner-text2{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size:  1.25vw;
+
+color: #000000;
+}
+.btn:hover{
+    color: white;
+}
+.btn1{
+width: 15.260416666666666;
+height: 3.8541666666666665vw;
+left: 7.916666666666667vw;
+top: 30.885416666666668vw;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 1.25vw;
+padding-left: 5rem;
+padding-right: 5rem;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+background: #6A2F85;
+border-radius: 10px;
+}
+.banner-div{
+    height: 90vh;
+    background-color: #F9FAFC;
+}
+.containermanual{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+.course_select_card > h3{
+    font-family: Mulish;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.course_select_card > hr{
+    width: 50%;
+    border: 1px solid #CFD2DE;
+    text-align:"left";
+    margin-left:' -5px';
+}
+.course-div{
+    display: flex;
+}
+.tabs{
+    color:black;
+    width:123px;
+    height:55px;
+    background: #F6F6F6;
+box-shadow: 0px 4px 4px rgba(106, 47, 133, 0.1);
+border-radius: 9px;
+font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+}
+.font-div{
+ font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 25px;
+color: black;
+}
+.active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 8px;
+    background: #6A2F85;
+  }
+
+  .active-content {
+    display: block;
+  }
+
+  .content {
+    
+    display: none;
+  }
+  .home-main{
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+  .videoThing{
+      width:1040px;
+      height:412px;
+  }
+  .cart-div{
+      display: flex;
+      min-height: 60vh;
+  }
+  .div-left{
+      flex:70%;
+      
+  }
+  .div-right{
+    flex:   40%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .categ{
+   display: block;
+    
+    }
+    .course_select_card{
+        display: none;
+    }
+    .tabsdiv{
+        display: none;
+    }
+    .mobile-latest{
+      display:  block;
+    }
+    .desktop-latest{
+        display: none;
+    }
+    .cart-div{
+        display: flex;
+       
+    }
+    .course-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-text2{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size:  15px;
+    
+    color: #000000;
+    }
+    .banner-text{
+        font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size:  45px;
+    
+    margin-bottom: 0px !important;
+    
+    }
+    .btn1{
+        width: 285px;
+        height: 65px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+       
+        
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+        
+        background: #6A2F85;
+        border-radius: 10px;
+        }
+       
+        
+  }
+  @media only screen and (min-width: 600px) {
+    .categ{
+   
+    display: block;
+    }
+    .course_select_card{
+        display: none;
+    }
+    .tabsdiv{
+        display: none;
+    }
+    .mobile-latest{
+        display:  block;
+      }
+      .desktop-latest{
+        display: none;
+    }
+     .cart-div{
+        display: flex;
+       
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+   
+    .course_select_card{
+        display: block;
+    }
+    .tabsdiv{
+        display: block;
+    }
+    .mobile-latest{
+        display:  none;
+      }
+      .desktop-latest{
+        display: block;
+    }
+    .cart-div{
+        display: flex;
+        
+    }
+  }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   
+    .course_select_card{
+        display: block;
+    }
+    .tabsdiv{
+        display: block;
+    }
+    .mobile-latest{
+        display:  none;
+      }
+      .desktop-latest{
+          display: block;
+      }
+      .cart-div{
+        display: flex;
+        
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   
+    .course_select_card{
+        display: block;
+    }
+    .tabsdiv{
+        display: block;
+    }
+    .mobile-latest{
+        display:  none;
+      }
+      .desktop-latest{
+          display: block;
+      }
+      .cart-div{
+        display: flex;
+        
+    }
+}
+
+/*  Changes to UI by Gaurav */ 
+
+/* General Styling */
+
+.containermanual {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+}
+
+.heading-section {
+    font-size: 40px;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 10px;
+}
+
+.navbar-brand > img {
+    width: 75px;
+}
+
+.textStyle {
+    font-size: 14px;
+}
+
+.navbar-toggler {
+    padding: 3px 6px;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar-brand > img {
+        width: 70px;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navbar-brand > img {
+        width: 65px;
+    }
+}
+
+/* Hero Section */
+
+.bannerdiv2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 100px is height of navbar */
+    height: calc(100vh - 100px);
+    /* Padding so as to align with nav bar */
+    padding: 20px calc(10px + 10px + 12px);
+}
+
+.div1 {
+    width: 62%;
+}
+
+.banner-text {
+    font-size: 45px;
+}
+
+.banner-text2, .btn1 {
+    font-size: 18px;
+}
+
+.btn1 {
+    width: initial;
+    height: initial;
+    padding: 10px 40px;
+}
+
+.banner-image {
+    width: 38%;
+}
+
+.banner-image > img {
+   width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+    .bannerdiv2 {
+        /* Padding so as to align with nav bar */
+        padding: 20px calc(10px + 5px + 12px);
+    }
+
+    .banner-text {
+        font-size: 38px;
+    }
+    
+    .banner-text2, .btn1 {
+        font-size: 16px;
+    }
+
+    .btn1 {
+        padding: 10px 30px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .banner-image{
+        display: none;
+    }
+
+    .banner-div {
+        padding: 40px 0;
+        height: auto;
+    }
+
+    .bannerdiv2 {
+        height: initial;
+    }
+
+    .div1 {
+        width: max-content;
+    }
+
+    .btn1 {
+        padding: 8px 20px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .bannerdiv2 {
+        /* Padding so as to align with nav bar */
+        padding: 20px;
+    }
+    
+    .banner-text {
+        font-size: 32px;
+    }
+    
+    .banner-text2, .btn1 {
+        font-size: 14px;
+    }
+
+    .btn1 {
+        padding: 6px 18px;
+    }
+}
+
+/* Courses Section */
+
+.courses-section {
+    padding: 60px 0;
+}
+
+.search-sort-container {
+    margin-top: 30px;
+}
+
+.course-container {
+    gap: 10px;
+    justify-content: center;
+
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 540px) {
+    .courses-section {
+        padding: 30px 0;
+    }
+
+    .search-sort-container {
+        flex-direction: column;
+    }
+
+    .categ {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer */
+
+@media only screen and (max-width: 768px) {
+    .footer-block {
+        padding: 0;
+    }
+    
+    .footer-box {
+        align-items: center;
+    }
+    
+    .footer-box > * {
+        width: 200px;
+    }
+
+    .copyright-para {
+        text-align: center;
+    }
+}
+
+/* User Details */
+
+.userDetails {
+    width: 100%;
+    padding: 10px;
+}
+
+.enrolled-courses {
+    justify-content: center;
+}

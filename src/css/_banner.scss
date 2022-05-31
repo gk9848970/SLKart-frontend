@@ -1,0 +1,23 @@
+.banner{
+    background:url('../images/home.svg');
+    width:40vw;
+    height:300px;
+    background-size: cover;
+   position:relative;
+    .buttoncontainer{
+     position:absolute;
+     bottom:20px;
+     right:20px;
+     display: flex;
+     button{
+        background-color:#FD5454;
+        border:none;
+        padding:8px;
+        color:#fff;
+        margin:0px 5px;
+        border-radius: 37px;
+        display: flex;
+        align-items: center;
+     }
+    }
+}

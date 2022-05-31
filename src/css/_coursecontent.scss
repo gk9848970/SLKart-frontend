@@ -1,0 +1,28 @@
+.coursecontent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:5px 0px;
+    button{
+        color:#fff;
+        border:none;
+        padding:2px 10px;
+        margin:0px 5px;
+        border-radius: 27px;
+    }
+    .coursebtn1{
+       background:#F8B302;
+    }
+    .coursebtn2{
+        background:#9933C8;
+       
+    }
+    div{
+        display: flex;
+        align-items: center;
+    }
+    img{
+        width:20px;
+        padding:0px 5px;
+    }
+}
