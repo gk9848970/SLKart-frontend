@@ -37,7 +37,7 @@ const CourseCardEdu = ({ cartContent }) => {
   
 
   return cartContent.length < 1 ? (
-    <div className="">
+    <div>
       <LoadingScreen
         loading={true}
         bgColor="#f1f1f1"

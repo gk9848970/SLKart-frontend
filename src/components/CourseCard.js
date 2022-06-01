@@ -2,7 +2,7 @@ import ButtonCustom from "../components/ButtonCustom";
 import cardimg from "../images/cardimg.svg";
 import LoadingScreen from "react-loading-screen";
 import { Favorite } from "@mui/icons-material";
-import { useState, useEffect, useParams } from "react";
+import { useState, useEffect, useParams, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../css/main.css";
 
@@ -11,11 +11,16 @@ import { ToastContainer, toast } from "react-toastify";
 import ReactStars from "react-rating-stars-component";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-const CourseCard = ({ cartContent }) => {
+import { CartContext } from "../store/CartStore";
+import { observer } from "mobx-react-lite";
+const CourseCard = observer(({ cartContent }) => {
   const userdata = JSON.parse(localStorage.getItem("userData"));
   const tokenData = localStorage.getItem("token");
   const [isClick, setClick] = useState(false);
   console.log(userdata.user_inst_id);
+
+  const cartStore = useContext(CartContext);
+
   //   async function productApi(){
   //       const productDatas = await axios.post(`http://localhost:5400/api/users/product/marketplace`, {
 
@@ -51,7 +56,8 @@ const CourseCard = ({ cartContent }) => {
       config
     );
 
-    console.log(addCart);
+    console.log("add cart",addCart);
+    if(addCart.data.flag == 1) cartStore.count = cartStore.count + 1 ; // (localStorage.getItem("count_cart"))+1);
     toast(addCart.data.msg);
   }
 
@@ -70,11 +76,11 @@ const CourseCard = ({ cartContent }) => {
   ) : (<>
   
     <div class="container-fluid">
-      <div class="row course-container">
+      <div class="row">
         {cartContent.map(function (productItem) {
           return (
             <div className="card m-2 col-md-4 col-lg-4" style={{ width: "18rem", minHeight:'fit-content'}}>
-              <Link to="/course" style={{ height: "200px" }}>
+              <Link to="/course">
                 <img
                   className="img-nav card-img-top"
                   src={productItem.image_url!= "" ? productItem.image_url: "https://images.justlanded.com/directory_images/India_Maharashtra_Mumbai/85792/Speedlabs-148991/photo/scaled_148991_168566_logo.jpg" }
@@ -118,12 +124,12 @@ const CourseCard = ({ cartContent }) => {
                   </div>
                 </div>
                 <div
-                  className="card-text mb-3"
-                  style={{ height: "132px" }}
+                  style={{ borderBottom: "2px solid #E2E2E2" }}
+                  className="card-text mb-2"
                 >
                   {productItem.description.slice(0, 200) + "..."}
                 </div>
-                <div className="card-text mt-3 d-flex justify-content-between" style={{ borderTop: "2px solid #E2E2E2", paddingTop: "8px"}}>
+                <div className="card-text mt-3 d-flex justify-content-between">
                   
                     <span id="mrp-span">
                     ₹ <del>{productItem.price}</del>
@@ -175,5 +181,6 @@ const CourseCard = ({ cartContent }) => {
     </div>
     </>
   );
-};
+});
+
 export default CourseCard;

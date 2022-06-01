@@ -15,6 +15,7 @@
     "antd": "^4.16.13",
     "axios": "^0.22.0",
     "md5": "^2.3.0",
+    "mobx-react-lite": "^3.4.0",
     "razorpay": "^2.0.7",
     "react": "^17.0.2",
     "react-animated-heart": "^0.0.7-alpha.1",

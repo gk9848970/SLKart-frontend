@@ -1,28 +1,51 @@
 .home-div{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 700;
+font-family: 'Mulish', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+font-weight: 700;
 }
 
 .logo{
     margin-left: 22em;
 }
-
 .navcoldesk{
-    margin-right:2%;
-    display: flex;
-    margin-left: auto;
+margin-right:2%;
+display: flex;
+margin-left: auto;
 }
-
 #logoImage{
     margin-left:4rem; 
 }
-
 @media(max-width: 768px){
     #logoImage{
         margin-left:0rem;  
     }
 }
+
+.fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:-20%;
+    content: attr(data-count);
+    font-size:50%;
+    padding:.3em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    color:red;
+    /* text-align:center; */
+    min-width:2em;
+    font-weight:bold;
+    background: white;
+    border-style:solid;
+  }
+  /* .fa-circle {
+    /* color:#DF0000; */
+  /* } */ */
+  
+  .red-cart {
+      color: #DF0000; background:white;
+  }
+

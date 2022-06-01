@@ -26,7 +26,7 @@ const PurchasedCard = ({ purchased }) => {
     </div>
   ) : (
     <div class="container">
-      <div class="row enrolled-courses">
+      <div class="row">
         {purchased.products ? purchased.products.map(function (productItem) {
           return (
             <div className="card1 m-4" style={{ width: "18rem" }}>

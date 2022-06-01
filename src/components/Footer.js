@@ -14,7 +14,7 @@ function Footer() {
   return (
     <>
       <footer className="footer-block mt-5">
-        <div className="d-flex justify-content-between mt-5 footer-box footer-container">
+        <div className="d-flex justify-content-between mt-5 footer-box">
           <div className="d-flex block1">
             <img
               src={Logo}
@@ -163,8 +163,8 @@ function Footer() {
             </ul>
           </div>
         </div>
-          <div className="mt-5 mb-5 footer-container">
-            <p className="p-div copyright-para">© Copyright Teevra Edutech Pvt Ltd 2019</p>
+          <div className="mt-5 mb-5">
+            <p className="p-div">© Copyright Teevra Edutech Pvt Ltd 2019</p>
           </div>
       </footer>
     </>);
