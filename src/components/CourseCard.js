@@ -74,7 +74,7 @@ const CourseCard = ({ cartContent }) => {
         {cartContent.map(function (productItem) {
           return (
             <div className="card m-2 col-md-4 col-lg-4" style={{ width: "18rem", minHeight:'fit-content'}}>
-              <Link to="/course">
+              <Link to="/course" style={{ height: "200px" }}>
                 <img
                   className="img-nav card-img-top"
                   src={productItem.image_url!= "" ? productItem.image_url: "https://images.justlanded.com/directory_images/India_Maharashtra_Mumbai/85792/Speedlabs-148991/photo/scaled_148991_168566_logo.jpg" }
@@ -119,6 +119,7 @@ const CourseCard = ({ cartContent }) => {
                 </div>
                 <div
                   className="card-text mb-3"
+                  style={{ height: "132px" }}
                 >
                   {productItem.description.slice(0, 200) + "..."}
                 </div>

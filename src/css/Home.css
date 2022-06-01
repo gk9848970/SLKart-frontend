@@ -525,6 +525,12 @@ color: black;
 
 /* Footer */
 
+.footer-container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+
 @media only screen and (max-width: 768px) {
     .footer-block {
         padding: 0;
@@ -552,4 +558,117 @@ color: black;
 
 .enrolled-courses {
     justify-content: center;
+}
+
+.user-detail-box {
+    margin-top: 40px;
+}
+
+.user-detail-table {
+    max-width: 800px;
+}
+
+.user-detail, .user-value {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.user-detail {
+    width: 200px;
+}
+
+.user-value {
+    word-wrap: break-word;
+}
+
+@media only screen and (max-width: 650px) {
+    .user-detail-box {
+        --padding-inline: 20px;
+        flex-direction: column;
+
+        margin-top: 15px;
+        padding: 10px var(--padding-inline);
+    }
+    
+    .user-detail-box .ant-tabs-nav-list {
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .user-detail-box .ant-tabs-tab {
+        margin: 0 !important;
+    }
+    
+    .user-detail-box .ant-tabs-content-holder {
+        border: none;
+    }
+
+    .user-detail-box .ant-tabs-tabpane {
+        margin-top: 20px;
+        padding-left: 0 !important;
+    }
+
+    .profileDetails {
+        margin-top: 15px;
+    }
+
+    .user-detail-box .ant-tabs-ink-bar {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .user-detail-box .ant-tabs-nav-list > * {
+        width: 50%;
+    }
+    
+    .user-detail-box .ant-tabs-tab {
+        padding-inline: 0 !important;
+    }
+
+    .user-detail-box .ant-tabs-content-holder {
+        border: none;
+        margin-top: 20px;
+    }
+
+    .user-detail-box .ant-tabs-tabpane {
+        margin-top: 5px;
+        /* margin-inline: calc(-1 * var(--padding-inline)); */
+    }
+
+    .ant-tabs-nav-wrap .ant-tabs-nav-list {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .user-detail, .user-value {
+        width: 100%;
+        display: block;
+    }
+
+    .user-value {
+        margin-bottom: 8px;
+    }
+}
+
+/* Purchase History */
+
+#rc-tabs-0-panel-5 > div > div {
+    overflow: scroll;
+    padding: 5px 0;
+}
+
+.purchase-history-table {
+    width: 900px;
+}
+
+.purchase-table-note {
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .purchase-table-note {
+        display: initial;
+    }
 }

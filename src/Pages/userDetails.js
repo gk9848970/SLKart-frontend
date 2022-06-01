@@ -66,21 +66,21 @@ else{
       <Location path="My Profile"/>
       <div className="userDetails">
       
-      <div style={{display:'flex',flexDirection:'row', gap: '15px' ,marginTop:'50px', paddingLeft:'20px'}}>
+      <div style={{display:'flex',flexDirection:'row', gap: '15px' ,marginTop:'10px', paddingLeft:'20px'}}>
             <Avatar sx={{width:'84px',height:'84px'}} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             <div style={{marginTop:'22px',fontFamily:'Mulish',fontSize:'25px',fontWeight:'bold',fontStyle:'normal'}}>
                <h2>Hello, {userdata.user_first_name}</h2>
             </div>
          </div>
 
-         <Tabs style={{marginTop:'50px'}} tabPosition="left">
+         <Tabs className="user-detail-box" tabPosition="left">
           <TabPane tab={<span>
             {/* <UserOutlined/> */}
                My Profile
           </span>} key="1">
           <div className="profileDetails" >
                <h1>My Profile</h1>
-               <table class="table table-borderless">
+               <table class="table table-borderless user-detail-table">
                 <tr class="table-active">
                  <td className="user-detail">Registration Date :</td>
                  <td className="user-value"> 27/1/2021 </td>

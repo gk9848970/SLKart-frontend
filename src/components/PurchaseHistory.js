@@ -21,7 +21,7 @@ console.log("orderIs",orderH );
                 </h1>
 
                 <div>
-                <table class="table table-striped" style={{width:'80%'}}>
+                <table class="table table-striped purchase-history-table">
                     <thead>
                         <tr >
                         <th className="table_head" style={{marginLeft:'25px'}} scope="col">S.No</th>
@@ -50,6 +50,7 @@ console.log("orderIs",orderH );
 : <h2>No Course yet !!</h2>}
                     </tbody>
                     </table>
+                    <p className="purchase-table-note">If screen is small for table to fit properly, You can scroll the table as well.</p>
                 </div>
         </div>
     )
