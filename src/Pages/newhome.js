@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
@@ -11,10 +11,7 @@ import Footer from "../components/Footer";
 import bannerImg from '../images/banner_image.png';
 import { Checkbox, Row, Col } from 'antd';
 import Newnavbar from '../components/Newnavbar';
-import { CartContext } from '../store/CartStore';
-import { observer } from 'mobx-react-lite';
-
-const Newhome = observer((props) => {
+function Newhome() {
     const [category, updateCategory] = useState([]);
     const [toggleState, setToggleState] = useState(1);
     const [productData, updateProductData] = useState([]);
@@ -27,33 +24,6 @@ const Newhome = observer((props) => {
     const myRef = useRef(null)
     const executeScroll = () => scrollToRef(myRef);
     const [searchText, setSearchText] = useState("");
-
-    const cartStore = useContext(CartContext);
-
-    async function cartItemss() {
-        console.log(tokenData, userdata);
-        const bodyParameters = {
-          "id": userdata.user_id,
-        };
-        const config = {
-          headers: { Authorization: `Bearer ${tokenData}` }
-        };
-        const cartElement = await axios.post(
-          `http://35.244.8.93:5011/api/users/cart`,
-          bodyParameters,
-          config
-        );
-    
-        // updateCartItem(cartElement.data);
-        console.log("app js effect", cartElement);
-        cartStore.count = cartElement.data.cartItems.Items.length;
-        localStorage.setItem("count_cart",cartElement.data.cartItems.Items.length > 0 ? cartElement.data.cartItems.Items.length : 0);
-      };
-    
-      useEffect(() => {
-        console.log("app.js use effect");
-        cartItemss();
-      },[]);
 
     async function productApi() {
 
@@ -159,7 +129,7 @@ const Newhome = observer((props) => {
     return (<div>
         <Newnavbar />
         <div className='banner-div'>
-            <div className='containermanual bannerdiv2 ' style={{ height: "100%" }}>
+            <div className='containermanual bannerdiv2'>
                 <div className='div1'>
                     <p className='banner-text '>
                         <b>Marketplace For All Your<br /><span className='spantext'></span></b>
@@ -170,13 +140,13 @@ const Newhome = observer((props) => {
                     <button onClick={executeScroll} className='btn btn1 mt-2'>View all courses</button>
                 </div>
                 <div className='banner-image mt-5'>
-                    <img src={bannerImg} height="100%" />
+                    <img src={bannerImg}/>
                 </div>
             </div>
         </div>
-        <div ref={myRef}>
-            <center><h2 className='mt-2'>Our courses</h2></center>
-            {productData && productData.length > 0 ? <div className='d-flex container justify-content-between'>   <div className="categ">
+        <div className="courses-section" ref={myRef}>
+            <center><h2 className='mt-2 heading-section'>Our Courses</h2></center>
+            {productData && productData.length > 0 ? <div className='d-flex container justify-content-between search-sort-container'>   <div className="categ">
                 <div className="dropdown">
                     <button className="btn  dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{ width: '200px', backgroundColor: '#6A2F85', color: 'white', border: 'none' }}>
                         Sort By Category
@@ -211,6 +181,6 @@ const Newhome = observer((props) => {
             </div>
         </div>
         <Footer /> </div>);
-});
+}
 
 export default Newhome;

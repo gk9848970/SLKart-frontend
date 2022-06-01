@@ -6,7 +6,7 @@ import LoadingScreen from "react-loading-screen";
 import { Link, useHistory } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import Footer from "../components/Footer";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import "../css/Home.css";
 import "../css/main.css";
 import cardProductItem from "../images/card.png";
@@ -15,21 +15,14 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { Button, TextField } from "@mui/material";
 import Razorpay from "../components/Razorpay";
-import { observer } from "mobx-react-lite";
-import { CartContext } from "../store/CartStore";
-
-const Cart = observer((props) => {
+const Cart = () => {
   const [cartItem, updateCartItem] = useState();
-  // const [count, setCount] = useState();
   const [couponRes, updatecouponRes] = useState();
   const [coupon, setcoupon] = useState("");
   const [isLoading, setLoading] = useState(true);
   const history = useHistory();
   const userdata = JSON.parse(localStorage.getItem("userData"));
   const tokenData = localStorage.getItem("token");
-
-  const cartStore = useContext(CartContext);
-
   async function cartItemss() {
     console.log(tokenData);
     const bodyParameters = {
@@ -43,11 +36,8 @@ const Cart = observer((props) => {
       bodyParameters,
       config
     );
-    console.log("cart",cartElement);
+    console.log(cartElement);
     updateCartItem(cartElement.data);
-    cartStore.count = cartElement.data.cartItems.Items.length;
-    // count++;
-    // setCount(count);
   }
   function retirecLogin() {
     if (tokenData) {
@@ -111,12 +101,10 @@ const Cart = observer((props) => {
     toast(deleteCart.data.msg);
     cartItemss();
   }
-
+  console.log();
   useEffect(() => {
     retirecLogin();
   }, []);
-
-  
   if (!cartItem) {
     return (
       <div>
@@ -137,7 +125,6 @@ const Cart = observer((props) => {
       <Location path="My cart" />
       <div className="cart-div container d-flex">
         <div className="div-left ">
-          {cartItem && cartItem.cartItems && cartItem.cartItems.Items ? <h5>{cartItem.cartItems.Items.length} products found in cart</h5> : <></>}
           {cartItem &&
             cartItem.cartItems.Items.map(function (productItem) {
               return (
@@ -243,6 +230,5 @@ const Cart = observer((props) => {
       </div>
       <Footer/>  </>
   );
-});
-
+};
 export default Cart;

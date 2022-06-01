@@ -139,7 +139,7 @@ function InstHome(){
      return flags ? (<div>
         <Newnavbar/>
         <div className='banner-div'>
-            <div className='containermanual bannerdiv2 ' style={{height:"100%"}}>
+            <div className='containermanual bannerdiv2'>
                 <div className='div1' >
                     <p className='banner-text '>
                       <b>  Marketplace For All Your<br/><span className='spantext'></span></b>
@@ -150,13 +150,13 @@ function InstHome(){
                     <button onClick={executeScroll} className='btn btn1 mt-2'>View all courses</button>
                 </div>
                 <div className='banner-image mt-5'>
-                <img src={bannerImg} height="100%"/>
+                <img src={bannerImg}/>
                 </div>
             </div>
         </div>
-        <div ref={myRef}>
-            <center><h2 className='mt-2'>Our courses</h2></center>
-            {productData && productData.length>0 ? <div className='d-flex container justify-content-between'>   <div className="categ">
+        <div className="courses-section" ref={myRef}>
+            <center><h2 className='mt-2 heading-section'>Our Courses</h2></center>
+            {productData && productData.length>0 ? <div className='d-flex container justify-content-between search-sort-container'>   <div className="categ">
                         <div className="dropdown">
                             <button className="btn  dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{ width: '200px', backgroundColor:'#6A2F85', color: 'white', border: 'none' }}>
                                 Sort By Category
