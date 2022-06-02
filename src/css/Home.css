@@ -343,10 +343,14 @@ color: black;
 
 /* General Styling */
 
+:root {
+    --nav-padding--left: 70px;
+}
+
 .containermanual {
     margin: 0 auto;
     padding: 0 10px;
-    max-width: 1200px;
+    max-width: 1440px;
 }
 
 .heading-section {
@@ -356,7 +360,7 @@ color: black;
 /* Navbar */
 
 .navbar {
-    padding: 10px;
+    padding: 10px var(--nav-padding--left);
 }
 
 .navbar-brand > img {
@@ -401,7 +405,7 @@ color: black;
     /* 100px is height of navbar */
     height: calc(100vh - 100px);
     /* Padding so as to align with nav bar */
-    padding: 20px calc(10px + 10px + 12px);
+    padding: 20px calc(10px + var(--nav-padding--left) + 12px);
 }
 
 .div1 {
@@ -428,6 +432,28 @@ color: black;
 
 .banner-image > img {
    width: 100%;
+}
+
+@media only screen and (min-width: 1344px) {
+    .banner-text {
+        font-size: 55px;
+    }
+    
+    .banner-text2, .btn1 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1344px) {
+    .navbar, .bannerdiv2 {
+        --nav-padding--left: 50px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .navbar, .bannerdiv2 {
+        --nav-padding--left: 30px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
