@@ -6,7 +6,7 @@ import LoadingScreen from "react-loading-screen";
 import { Link, useHistory } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import Footer from "../components/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../css/Home.css";
 import "../css/main.css";
 import cardProductItem from "../images/card.png";
@@ -15,14 +15,20 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { Button, TextField } from "@mui/material";
 import Razorpay from "../components/Razorpay";
-const Cart = () => {
+import { observer } from "mobx-react-lite";
+import { CartContext } from "../store/CartStore";
+
+const Cart = observer((props) => {
   const [cartItem, updateCartItem] = useState();
+  // const [count, setCount] = useState();
   const [couponRes, updatecouponRes] = useState();
   const [coupon, setcoupon] = useState("");
   const [isLoading, setLoading] = useState(true);
   const history = useHistory();
   const userdata = JSON.parse(localStorage.getItem("userData"));
   const tokenData = localStorage.getItem("token");
+  const cartStore = useContext(CartContext);
+
   async function cartItemss() {
     console.log(tokenData);
     const bodyParameters = {
@@ -125,6 +131,7 @@ const Cart = () => {
       <Location path="My cart" />
       <div className="cart-div container d-flex">
         <div className="div-left ">
+        {cartItem && cartItem.cartItems && cartItem.cartItems.Items ? <h5>{cartItem.cartItems.Items.length} products found in cart</h5> : <></>}
           {cartItem &&
             cartItem.cartItems.Items.map(function (productItem) {
               return (
@@ -230,5 +237,6 @@ const Cart = () => {
       </div>
       <Footer/>  </>
   );
-};
+});
+
 export default Cart;

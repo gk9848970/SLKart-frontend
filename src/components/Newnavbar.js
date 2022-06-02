@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import Logo from '../images/logo.svg';
@@ -12,8 +12,12 @@ import { Link, useHistory } from "react-router-dom";
 import CourseCard from '../components/CourseCard';
 import LoadingScreen from "react-loading-screen";
 import search from '../images/search.svg';
+import { observer } from 'mobx-react-lite';
+import { CartContext } from '../store/CartStore';
 
-function Newnavbar() {
+const Newnavbar = observer((props) => {
+
+  const cartStore = useContext(CartContext);
     
     return(<div className='containermanual'>
        <nav className="navbar navbar-expand-lg navbar-light">
@@ -31,7 +35,11 @@ function Newnavbar() {
         <Link to="/myprofile">  <a className="nav-link active me-4 d-flex" href="#"><img src={profileicon} className='me-2'/>Profile</a></Link>
         </li>
         <li className="nav-item textStyle">
-        <Link to="/mycart"> <a className="nav-link active me-4 d-flex" href="#"><img src={carticon} className='me-2'/>Cart</a></Link>
+          <Link to="/mycart"> <a className="nav-link active me-4 d-flex" href="#"><span class="fa-stack fa-1x has-badge mr-2" data-count={cartStore.count}>
+                  <i class="fa fa-circle fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                </span>Cart</a>
+          </Link>
         </li>
         <li className="nav-item borders textStyle">
           <a className="nav-link active me-4 d-flex" href="#"><img src={callicon} className='me-2'/>{localStorage.getItem('contact1')}</a>
@@ -49,6 +57,6 @@ function Newnavbar() {
    
 
     </div>); 
-}
+});
 
 export default Newnavbar;

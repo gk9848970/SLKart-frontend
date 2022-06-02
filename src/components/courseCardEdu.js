@@ -5,7 +5,7 @@ import { Favorite } from "@mui/icons-material";
 import { useState, useEffect, useParams } from "react";
 import { Link } from "react-router-dom";
 import "../css/main.css";
-import Heart from "react-animated-heart";
+// import Heart from "react-animated-heart";
 import { ToastContainer, toast } from "react-toastify";
 import ReactStars from "react-rating-stars-component";
 import "react-toastify/dist/ReactToastify.css";

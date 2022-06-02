@@ -18,6 +18,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Newhome from './Pages/newhome';
 import axios from 'axios';
+import { CartProvider } from "./store/CartStore";
 
 function App() {
   const [cartItem, updateCartItem] = useState();
@@ -48,19 +49,21 @@ async function cartItemss(){
          <div className="App"> 
            
          
-         <Switch>
-          <Route exact path="/" component={tokenData ? Newhome : Login}></Route>
-          <Route exact path="/homes" component={Newhome}></Route>
-          <Route exact path="/home/:hash" component={InstHome}></Route>
+         <CartProvider>
+          <Switch>
+            <Route exact path="/" component={tokenData ? Newhome : Login}></Route>
+            <Route exact path="/homes" component={Newhome}></Route>
+            <Route exact path="/home/:hash" component={InstHome}></Route>
             <Route exact path="/signup" component={SignUp}></Route>
             <Route exact path="/login" component={Login}></Route>
-            <Route exact path="/course/:id" component={Freecourse}></Route> 
-            <Route exact path="/paidcourse/:id" component={Course}></Route> 
+            <Route exact path="/course/:id" component={Freecourse}></Route>
+            <Route exact path="/paidcourse/:id" component={Course}></Route> z
             <Route exact path="/userprofile" component={UserProfile}></Route>
             <Route exact path="/payment" component={Billing}></Route>
             <Route exact path="/mycart" component={Cart}></Route>
             <Route exact path="/myprofile" component={UserDetails}></Route>
           </Switch>
+        </CartProvider>
           </div>
          {/* </div> */}
          

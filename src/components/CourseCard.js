@@ -2,20 +2,25 @@ import ButtonCustom from "../components/ButtonCustom";
 import cardimg from "../images/cardimg.svg";
 import LoadingScreen from "react-loading-screen";
 import { Favorite } from "@mui/icons-material";
-import { useState, useEffect, useParams } from "react";
+import { useState, useEffect, useParams, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../css/main.css";
 
-import Heart from "react-animated-heart";
+// import Heart from "react-animated-heart";
 import { ToastContainer, toast } from "react-toastify";
 import ReactStars from "react-rating-stars-component";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { CartContext } from "../store/CartStore";
+import { observer } from "mobx-react-lite";
+
 const CourseCard = ({ cartContent }) => {
   const userdata = JSON.parse(localStorage.getItem("userData"));
   const tokenData = localStorage.getItem("token");
   const [isClick, setClick] = useState(false);
   console.log(userdata.user_inst_id);
+
+  const cartStore = useContext(CartContext);
   //   async function productApi(){
   //       const productDatas = await axios.post(`http://localhost:5400/api/users/product/marketplace`, {
 
@@ -51,7 +56,8 @@ const CourseCard = ({ cartContent }) => {
       config
     );
 
-    console.log(addCart);
+    console.log("add cart",addCart);
+    if(addCart.data.flag == 1) cartStore.count = cartStore.count + 1 ; // (localStorage.getItem("count_cart"))+1);
     toast(addCart.data.msg);
   }
 
