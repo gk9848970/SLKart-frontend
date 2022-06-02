@@ -91,8 +91,8 @@ function Login() {
         <div className="loginmain-div">
             <div className="containermanual">
 
-                <div className="d-flex justify-content-center align-items-center loginBlock" style={{height:"100%"}} >
-                    <Col className='col-md-8'>
+                <div className="d-flex justify-content-center align-items-center loginBlock">
+                    <Col className=''>
                         <h4 className="sign-text">Sign In to Learn the Best Course</h4>
                         <div className="d-flex learning-block-boy">
                             <div>
@@ -112,8 +112,8 @@ function Login() {
                     </Col>
 
 
-                    <div className='col-md-4 htl'>
-                        <Col md={10} className="login-form-box">
+                    <div className='htl'>
+                        <div className="login-form-box">
                             <h3 className="form-heading">Login to your Account</h3>
                             <p className="form-text">
                                 Enter to continue and explore within your grasp
@@ -179,7 +179,7 @@ function Login() {
                             </div>
 
                             <br />
-                        </Col>
+                        </div>
                     </div>
 
                 </div>

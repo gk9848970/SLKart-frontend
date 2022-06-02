@@ -285,3 +285,88 @@
   
   
   }
+
+/* Changes in UI By Gaurav */
+
+.loginmain-div {
+  height: initial;
+}
+
+.loginBlock {
+  padding: 100px 20px;
+  height: 100vh;
+  justify-content: center;
+}
+
+.col {
+  position: relative;
+  padding-right: 20px;
+}  
+
+.sign-text {
+  margin-top: 0;
+  width: 100%;
+}
+
+.boy-img {
+  position: absolute;
+  width: initial;
+  top: 70px;
+  right: 40px;
+  height: 320px;
+}
+
+.login-form-box {
+  margin: 0;
+  width: 80%;
+}
+
+@media only screen and (max-width: 1150px) {
+  .boy-img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .sign-text {
+    font-size: 50px;
+    line-height: 1.6;
+  }
+
+  .start-learning, .register, .account {
+    font-size: 18px;
+  }
+
+  .login-form-box {
+    max-width: 350px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .loginBlock {
+    flex-direction: column;
+    height: initial;
+
+    padding: 40px 20px;
+  }
+
+  .col {
+    padding-right: 0;
+  }
+
+  .sign-text {
+    font-size: 30px;
+    line-height: 1.6;
+  }
+
+  .start-learning, .register, .account {
+    font-size: 16px;
+    width: initial;
+    height: initial;
+  }
+
+  .account {
+    margin-top: 0;
+  }
+}
