@@ -534,6 +534,21 @@ color: black;
     margin: 40px 0;
 }
 
+.card-category {
+    --offset: 12px;
+    position: absolute;
+    top: var(--offset);
+    left: var(--offset);
+
+    display: block;
+    padding: 6px 14px;
+    background-color: #FFCA41;
+    border-radius: 8px;
+
+    color: black;
+    font-weight: 700;
+}
+
 @media only screen and (max-width: 540px) {
     .courses-section {
         padding: 30px 0;

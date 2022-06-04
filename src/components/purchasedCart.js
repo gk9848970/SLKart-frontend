@@ -30,8 +30,9 @@ const PurchasedCard = ({ purchased }) => {
       <div class="row enrolled-courses">
         {purchased.products ? purchased.products.map(function (productItem) {
           return (
-            <div className="card1 m-4" style={{ width: "18rem" }}>
+            <div className="card1 m-4" style={{ width: "18rem", position: "relative" }}>
               <Link to="/course">
+                <span className="card-category">Course Category</span>
                 <img
                   className="img-nav card-img-top"
                   src={productItem.image_url}

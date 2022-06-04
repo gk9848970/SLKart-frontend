@@ -19,7 +19,6 @@ const CourseCard = ({ cartContent }) => {
   const tokenData = localStorage.getItem("token");
   const [isClick, setClick] = useState(false);
   console.log(userdata.user_inst_id);
-
   const cartStore = useContext(CartContext);
   //   async function productApi(){
   //       const productDatas = await axios.post(`http://localhost:5400/api/users/product/marketplace`, {
@@ -80,12 +79,12 @@ const CourseCard = ({ cartContent }) => {
         {cartContent.map(function (productItem) {
           return (
             <div className="card m-2 col-md-4 col-lg-4" style={{ width: "18rem", minHeight:'fit-content'}}>
-              <Link to="/course" style={{ height: "200px" }}>
+              <Link to="/course" style={{ height: "200px", position: "relative"}}>
+                <span className="card-category">Course Category</span>
                 <img
                   className="img-nav card-img-top"
                   src={productItem.image_url!= "" ? productItem.image_url: "https://images.justlanded.com/directory_images/India_Maharashtra_Mumbai/85792/Speedlabs-148991/photo/scaled_148991_168566_logo.jpg" }
                   style={{ height: "200px" }}
-                  
                   alt="..."
                 />
               </Link>
